@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>Cheryl Velez - jQuery Animated Sunflower</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script>
+  $(document).ready(function() {
+    $(".container").delay(500).fadeIn("slow");
+    // expanding bar. Start this first
+    $("#hbar").addClass("after");
+    $("#hbar").delay(300).animate( {
+      width: '80%'
+    }, 2000); // end animate
+    
+    // scrolling text. Then start the scrolling text
+    thisText="Good evening!";
+    var arr = thisText.split("");
+    $("#readout").text("");
+    $.each(arr, function(index,value) {
+      if (value != "") {
+        $("#readout").delay(150).fadeIn("slow", function(){
+        $("#readout").append(value); 
+        });
+      }
+    }); // end each
+    $(".container").delay(1800).fadeOut("slow");
+    //flower animation
+    $(".petal-top").delay(3000).animate({
+   opacity:'1',
+   width:'115px',
+   height: '110px',
+  }, 500).css("background","#ffa700");  
+  $(".petal-r2").delay(3300).animate({
+    opacity:'1'
+  }, 500);
+   $(".petal-r3").delay(3800).animate({
+    opacity:'1',
+     width: '115px',
+     height: '110px',
+  }, 500).css("background","#ffa700");
+   $(".petal-r4").delay(4300).animate({
+    opacity:'1'
+  }, 500);
+   $(".petal-l4").delay(4800).animate({
+    opacity:'1',
+     width:'115px',
+     height: '110px',
+  }, 500).css("background","#ffa700");
+   $(".petal-l3").delay(5300).animate({
+    opacity:'1'
+  }, 500);
+   $(".petal-bottom").delay(5800).animate({
+     opacity:'1',
+     width:'115px',
+     height: '110px',
+  }, 500).css("background","#ffa700");
+   $(".petal-l2").delay(6300).animate({
+    opacity:'1'
+  }, 500);
+   $(".petal-l1").delay(6800).animate({
+    opacity:'1',
+     width:'115px',
+     height: '110px',
+  }, 500).css("background","#ffa700");
+   $(".petal-r1").delay(7300).animate({
+    opacity:'1'
+  }, 500);
+   $(".center").delay(7800).animate({
+    opacity:'1'
+  }, 500);
+  $(".quote1").delay(8300).animate({
+    opacity:'1'
+  }, 1000);
+   $(".quote2").delay(9600).animate({
+    opacity:'1'
+  }, 1000);
+});
+</script>
+  
+</head>
+<body>
+
+  <div class="container">
+    <div id="readout">Hello</div>
+    <div><hr id="hbar" class="before"></div>
+  </div> <!-- row container -->
+
+  <div class="nav"> 
+      <div class="quote1">
+        "May all your weeds be wildflowers...</div>
+      
+      <div class="quote2">
+        ...and all your code be bug free."
+      </div>
+       
+       
+        <div class="flower">
+          
+        <div class="petal-top"></div> 
+          
+        <div class="petal-r1"></div>
+          
+        <div class="petal-r2"></div>
+          
+        <div class="center"></div>
+          
+        <div class="petal-l1"></div>
+                                    
+        <div class="petal-r3"></div>
+          
+        <div class="petal-l2"></div>
+        
+        <div class="petal-bottom"></div>
+          
+        <div class="petal-l3"></div>
+          
+        <div class="petal-r4"></div>
+          
+        <div class="petal-l4"></div>
+          
+       </div> <!-- flower -->
+        
+        
+      </div>
+
+</body>
+</html>
